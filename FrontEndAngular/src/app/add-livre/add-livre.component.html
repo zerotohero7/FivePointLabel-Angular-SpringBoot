@@ -1,0 +1,27 @@
+<div class="col-md-8 offset-md-3">
+  <h1>Create livre</h1>
+  <form (ngSubmit)="onsubmit()">
+    <div class="mb-3">
+      <label for="Titre" class="form-label">Titre</label>
+      <input type="text" class="form-control" id="Titre" [(ngModel)]="livre.Titre" name="Titre">
+    </div>
+    <div class="mb-3">
+      <label for="Auteur" class="form-label">Auteur</label>
+      <input type="text" class="form-control" id="Auteur" [(ngModel)]="livre.Auteur" name="Auteur">
+    </div>
+    <div class="mb-3">
+      <label for="Description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="Description" [(ngModel)]="livre.Description" name="Description">
+    </div>
+    <div class="mb-3">
+      <label for="Contenue" class="form-label">Contenue</label>
+      <input type="text" class="form-control" id="Contenue" [(ngModel)]="livre.Contenue" name="Contenue">
+    </div>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="livre.categoryLivre" name="category" >
+      <option *ngFor="let categorie of categories"  >{{categorie.nomCategorie }}</option>
+
+    </select><br>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+
+  </div>

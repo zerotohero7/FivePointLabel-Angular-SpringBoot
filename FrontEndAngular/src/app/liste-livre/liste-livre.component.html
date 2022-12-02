@@ -1,0 +1,22 @@
+<h2>liste de livres</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Auteur</th>
+      <th>Description</th>
+      <th>Contenue</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let livre of livres">
+        <th>{{livre.Titre}}</th>
+        <th>{{livre.Auteur}}</th>
+        <th>{{livre.Description}}</th>
+        <th>{{livre.Contenue}}</th>
+        <th>{{livre.categoryLivre}}</th>
+    </tr>
+  </tbody>
+</table>
